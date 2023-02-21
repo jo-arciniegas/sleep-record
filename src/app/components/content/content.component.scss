@@ -1,0 +1,37 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  .chart-info {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0;
+
+    &__cards {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .mdc-card {
+        flex: 1;
+        max-width: calc(50% - 0.5rem);
+
+        .card-content {
+          display: flex;
+          flex-direction: column;
+
+          .mdc-button {
+            width: fit-content;
+          }
+
+          h1 {
+            span {
+              font-size: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
