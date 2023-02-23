@@ -14,31 +14,8 @@
       <li><span>07:00</span></li>
     </ul>
     <div class="bars">
-      <div class="bar-group">
-        <div class="bar bar-1 stat-1" style="height: 51%;">
-        </div>
-      </div>
-      <div class="bar-group">
-        <div class="bar bar-2 stat-2" style="height: 111%;">
-        </div>
-      </div>
-      <div class="bar-group">
-        <div class="bar bar-3 stat-2" style="height: 36%;">
-        </div></div>
-      <div class="bar-group">
-        <div class="bar bar-4 stat-2" style="height: 64%;">
-        </div>
-      </div>
-      <div class="bar-group">
-        <div class="bar bar-5 stat-1" style="height: 28%;">
-        </div>
-      </div>
-      <div class="bar-group">
-        <div class="bar bar-6 stat-2" style="height: 104%;">
-        </div>
-      </div>
-      <div class="bar-group">
-        <div class="bar bar-7 stat-1" style="height: 94%;">
+      <div class="bar-group" *ngFor="let data of chartData; let i = index">
+        <div [class]="'bar bar-' + (i + 1) + ' stat-' + data.stat"  [style.height.%]="data.value">
         </div>
       </div>
     </div>

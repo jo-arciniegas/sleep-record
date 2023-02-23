@@ -176,14 +176,39 @@
         height: $size - ($width * 2);
         background: $center;
 
-        &:after {
-          display: inline-block;
-          width: 100%;
+        .chart-content {
+          box-sizing: border-box;
+          &:before {
+            display: inline-block;
+            width: 100%;
+            font-size: calc($size / 5);
+            color: $textColor;
+            text-align: center;
+            line-height: $size - ($width * 2);
+            content: '#{$perc}';
+          }
+        }
+
+        .percent-content {
+          width: 50%;
+          box-sizing: border-box;
           font-size: calc($size / 5);
-          color: $textColor;
-          text-align: center;
-          line-height: $size - ($width * 2);
-          content: '#{$perc}%';
+          margin-left: 50%;
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: '%';
+            width: 100%;
+            font-size: calc($size / 5);
+            color: $textColor;
+            text-align: center;
+            line-height: $size - ($width * 2);
+          }
         }
       }
     }
